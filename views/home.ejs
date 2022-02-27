@@ -1,0 +1,11 @@
+<%- include("partals/header") %>
+
+<h1>Home</h1>
+<p><%= homecontent %></p>
+<% postarray.forEach(function(post){ %>
+    <h2> <%= post.Title %></h2>
+    <p> <%= post.Body.substring(0,100) + "..."%>
+        <a href="/posts/<%=post.Title%>">Read more</a>
+    </p>
+<% }) %>
+<%- include("partals/footer") %>
